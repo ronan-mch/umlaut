@@ -32,12 +32,7 @@ default:
           - 'SPRINGER_LINK_'
           - 'ELSEVIER_SD_'
           - 'HIGHWIRE_'
-
-      SFXRSI:
-        type: SfxRsi
-        disabled: true
-        base_url: http://sfx.library.edu/sfx_local/cgi/core/rsi/rsi.cgi
-        priority: 3
+      
       # First half of Amazon, run in foreground, get metadata and cover images.
       Amazon:
         disabled: true
