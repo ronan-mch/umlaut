@@ -1,0 +1,26 @@
+da:
+  hello: "Hej med dig!"
+  Journals: "E-Tidsskrifter"
+  journals_subheader: Leder du efter en bestemt tidsskrift eller artikel?
+  search_instructions: Indsæt tidsskriftets titel eller ISSN nummeret. Hvis du har begge dele, brug ISSN nummeret.
+  journal_title: "Titel af tidsskrift"
+  contains: "Indeholder"
+  begins_with: "Starter med"
+  exact_match: "Lige præcis"
+  search_optional_info: 'Ekstra information - Indtast så meget som du kender af følgende:'
+  volume: 'Volumen:'
+  date_label: 'Date:'
+  issue: 'Nummer:'
+  start_page: 'Start side:'
+  doi_or_pubmed_id: DOI eller Pubmed identifier
+  search: Søg
+  having_trouble: Problemer?
+  having_trouble_message: Prøv at indtaste mindre data. Hvis en værdi er forkert, kunne det sagtens skabe problemer.
+  date:
+    month_names: [~, januar, februar, marts, april, maj, juni, juli, august, september, oktober, november, december]
+    abbr_month_names: [~, jan, feb, mar, apr, maj, jun, jul, aug, sep, okt, nov, dec]
+  datetime:
+    prompts:
+      month: Måned
+      day: Dag
+      year: År

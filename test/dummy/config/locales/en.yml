@@ -2,4 +2,24 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  hello: Hello world
+  Journals: Journals
+  journals_subheader: Looking for a specific journal or article
+  search_instructions: Enter the journal title or the ISSN. If you have both the journal title and ISSN, use the ISSN.
+  journal_title: Journal Title
+  contains: Contains
+  begins_with: Begins with
+  exact_match: Exact match
+  search_optional_info: 'Optional information - Enter as much as you know of the following:'
+  date_label: 'Date:'
+  volume: 'Volume:'
+  issue: 'Issue:'
+  doi_or_pubmed_id: 'DOI or Pubmed Identifier:'
+  search: Search
+  having_trouble: Having Trouble?
+  having_trouble_message: Try entering less information about your article. If one piece of information is wrong, it could be causing the problem.
+  date:
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    day: Day
+    year: Year
