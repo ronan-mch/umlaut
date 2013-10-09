@@ -1,12 +1,13 @@
 da:
-  hello: "Hej med dig!"
-  Journals: "E-Tidsskrifter"
+  hello: Hej med dig!
+  Journals: E-Tidsskrifter
+  other: Andet
   journals_subheader: Leder du efter en bestemt tidsskrift eller artikel?
   search_instructions: Indsæt tidsskriftets titel eller ISSN nummeret. Hvis du har begge dele, brug ISSN nummeret.
-  journal_title: "Titel af tidsskrift"
-  contains: "Indeholder"
-  begins_with: "Starter med"
-  exact_match: "Lige præcis"
+  journal_title: Tidsskrift navn
+  contains: Indeholder
+  begins_with: Starter med
+  exact_match: Lige præcis
   search_optional_info: 'Ekstra information - Indtast så meget som du kender af følgende:'
   volume: 'Volumen:'
   date_label: 'Date:'
@@ -24,3 +25,21 @@ da:
       month: Måned
       day: Dag
       year: År
+  browse_by_jtitle:  'Browse efter tidsskrift navn:'
+  more_search_options: Flere søgemuligheder
+  showing_results: Her vises fra %{start} til %{until} af %{total}
+  note: 'Bemærk:'
+  other_titles_might: Andre poster kunne muligvis passe med din søgekriterier
+  previous: forrige side
+  next: næste side
+  chapter_title: Chapter/Part Title
+  article_title: Article Title
+  book_title: Book Title
+  proceeding_title: Proceeding Title
+  conference_name: Conference Name
+  report_title: Report Title
+  report: Report
+  author: Forfatter
+  publisher: Udgiver
+  published: Udgivet
+  page: 'side:'

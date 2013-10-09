@@ -4,6 +4,7 @@
 en:
   hello: Hello world
   Journals: Journals
+  other: Other
   journals_subheader: Looking for a specific journal or article
   search_instructions: Enter the journal title or the ISSN. If you have both the journal title and ISSN, use the ISSN.
   journal_title: Journal Title
@@ -21,5 +22,26 @@ en:
   date:
     month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
     abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
-    day: Day
-    year: Year
+  datetime:
+    prompts:
+      month: Month
+      day: Day
+      year: Year
+  browse_by_jtitle: 'Browse by Journal Title:'
+  more_search_options: More search options
+  showing_results: Showing results %{start} through %{until} of %{total}
+  note: 'Note:'
+  other_titles_might: Alternate titles might have matched your search terms
+  previous: Previous
+  next: Next
+  chapter_title: Chapter/Part Title
+  article_title: Article Title
+  book_title: Book Title
+  proceeding_title: Proceeding Title
+  conference_name: Conference Name
+  report_title: Report Title
+  report: Report
+  author: Author
+  publisher: Publisher
+  published: Published
+  page: 'Page:'
