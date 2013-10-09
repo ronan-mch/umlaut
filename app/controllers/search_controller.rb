@@ -41,7 +41,7 @@ class SearchController < UmlautController
   end
 
   def index
-    @page_title = "Journals"
+    @page_title = t(:Journals)
     journals()
   end
 
