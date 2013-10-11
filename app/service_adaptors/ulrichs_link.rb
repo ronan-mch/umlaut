@@ -16,7 +16,7 @@ class UlrichsLink < Service
     @base_url ||= "https://ulrichsweb.serialssolutions.com/api/openurl?issn="
     # Old one
     #@base_url ||= "http://www.ulrichsweb.com/ulrichsweb/Search/call_fullCitation.asp?/vendor_redirect.asp?oVendor=#{@vendor}&oIssn="
-    @link_name = "Periodical information"
+    @link_name = 'Periodical Information'
   end
   
   def service_types_generated

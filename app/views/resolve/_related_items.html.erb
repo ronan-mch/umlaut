@@ -8,7 +8,8 @@ list_with_limit('umlaut_cited_by', cited_by, :ul_class => "related_items respons
   render(:partial => "standard_response_item", :object=> item, :locals => { :show_source => true, :li_class => "related_item"}) %><%
 end 
 # Render similar services (Related items)
-%><%= 
+%><%=
+
 list_with_limit('umlaut_similar_items', similar, :ul_class =>"related_items response_list") do |item, index | %><%= 
   render(:partial => "standard_response_item", :object=> item, :locals => { :show_source => true}) %><%
 end

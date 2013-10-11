@@ -18,7 +18,7 @@ module SearchHelper
       when @current_context_object.referent.format == 'journal'
         result.atitle = t(:article_title)
       end
-      result.title = 'Title'      
+      result.title = t(:title)
     else
       case ref_meta["genre"]
       when /article|journal|issue/
