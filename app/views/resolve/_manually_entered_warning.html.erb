@@ -3,5 +3,5 @@
   # SFX recognized it as an actually existing journal. If not, then it
   # might be a typo. If it came from a manually entered citation, warn them.
   content_tag(:div, content_tag(:i, "", :class => "umlaut_icons-famfamfam-error") +
-    " Warning: #{umlaut_config.app_name} does not know about a #{@user_request.referent.format.downcase} with this name. Please check your entry.",
+    t(:no_item_found_warning, app_name: umlaut_config.app_name, format_searched: @user_request.referent.format.downcase),
       :class=>"alert alert-error") if display_not_found_warning?(@user_request) %>

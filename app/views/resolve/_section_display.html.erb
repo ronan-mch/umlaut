@@ -15,8 +15,8 @@ if presenter.visible?
     render(presenter.content_render_hash) %><%
   elsif presenter.list_visible_limit %><%= 
     list_with_limit("#{presenter.div_id}_list_with_limit", presenter.responses_list, 
-      :limit => presenter.list_visible_limit, :ul_class => "response_list #{presenter.div_id}") do |item, index| %><%= 
-        render(presenter.item_render_hash(item)) %><% 
+      :limit => presenter.list_visible_limit, :ul_class => "response_list #{presenter.div_id}") do |item, index| %><%=
+    render(presenter.item_render_hash(item)) %><%
       end 
   elsif presenter.responses_list.length == 0 && ! presenter.services_in_progress?%>
     <ul class="response_list">

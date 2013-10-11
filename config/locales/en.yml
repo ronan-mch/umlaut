@@ -1,5 +1,95 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
 en:
-  umlaut:
-    coverage_summary:
-      open_start: "first"
-      open_end: "latest"
+  hello: Hello world
+  Journals: Journals
+  other: Other
+  journals_subheader: Looking for a specific journal or article
+  search_instructions: Enter the journal title or the ISSN. If you have both the journal title and ISSN, use the ISSN.
+  journal_title: Journal Title
+  contains: Contains
+  begins_with: Begins with
+  exact_match: Exact match
+  search_optional_info: 'Optional information - Enter as much as you know of the following:'
+  date_label: date
+  volume: volume
+  issue: issue
+  doi_or_pubmed_id: 'DOI or Pubmed Identifier:'
+  search: Search
+  having_trouble: Having Trouble?
+  having_trouble_message: Try entering less information about your article. If one piece of information is wrong, it could be causing the problem.
+  date:
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  datetime:
+    prompts:
+      month: Month
+      day: Day
+      year: Year
+  browse_by_jtitle: 'Browse by Journal Title:'
+  more_search_options: More search options
+  showing_results: Showing results %{start} through %{until} of %{total}
+  note: 'Note:'
+  other_titles_might: Alternate titles might have matched your search terms
+  previous: Previous
+  next: Next
+  chapter_title: Chapter/Part Title
+  article_title: Article Title
+  book_title: Book Title
+  proceeding_title: Proceeding Title
+  conference_name: Conference Name
+  report_title: Report Title
+  report: Report
+  author: Author
+  publisher: Publisher
+  published: Published
+  page: 'Page:'
+  title: Title
+  part: Part
+  article: article
+  journal: journal
+  published_in: Published in
+  last_name: Last Name
+  first_name: First Name
+  initials: Initials
+  online_access: Online Access
+  not_available: Not Available
+  request_from_interlibrary: Request a copy from Inter-Library Loan
+  more_like_this: More like this
+  related_items: Related Items
+  see_also: See also
+  export_tools: Export tools
+  excerpt_prompt: "A limited preview which may include table of contents, index, and other selected pages."
+  copies_in_library: Copies in Library
+  electronic_version: Electronic Version
+  send_to_phone: Send to phone
+  email: Email
+  more_info: More info
+  request: Request
+  edition_info: Edition information
+  maybe_alt_edition: May be alternate edition
+  ulrichs_link_name: Periodical information
+  worldcat_link_name: Find in other libraries
+  from: from
+  first: first
+  latest: latest
+  some_volumes_of: Some volumes of
+  search_inside_some_vols: Search inside some volumes
+  search_inside_this: Search inside this
+  via: via
+  search_inside_progress_message: Looking for tools to search inside this
+  loading: loading
+  close: close
+  email_export_header: Email the title and locations
+  enter_your_email: 'Enter your email address:'
+  send: Send!
+  back: back
+  short_link: Short link
+  no_item_found_warning: 'Warning: %{app_name} does not know about a %{format_searched} with this name. Please check your entry'
+  text_sent: Sent to %{number}.
+  sent: sent
+  help_header: 'Question? Problem? Contact:'
+  powered_by: Powered by
+  using_services_from: Using services from
+  and_others: and others

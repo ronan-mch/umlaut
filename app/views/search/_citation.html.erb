@@ -21,6 +21,7 @@
     end %>
     <%=# Journal/Book Title
     if ref_meta.has_key?("jtitle")  or ref_meta.has_key?("title") or ref_meta.has_key?("btitle")
+
       content_tag(:dt, "#{labels.title}:", :class => "title") +
         content_tag(:dd, :class => "title") {
           link_to(ref_meta["title"] || ref_meta["btitle"] || ref_meta["jtitle"],

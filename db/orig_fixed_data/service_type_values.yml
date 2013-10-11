@@ -1,11 +1,11 @@
 fulltext:
   id: 1
-  display_name: Electronic Version
+  display_name: electronic_version
   
 holding:
   id: 2
   display_name: Copy in Library
-  display_name_plural: Copies in Library
+  display_name_plural: copies_in_library
   
 document_delivery:
   id: 3
@@ -49,7 +49,7 @@ highlighted_link:
 holding_search:
   id: 15
   display_name: Copy in Library
-  display_name_plural: Copies in Library
+  display_name_plural: copies_in_library
   
 # This is meant for 'fulltext' from such sources as the OPAC/ILS, where
 # it will always be a title-level link, and dates of coverage usually
@@ -110,7 +110,7 @@ similar_item:
 # Used to save/send the citation/holdings
 export_citation:
   id: 103
-  display_name: Export tool
+  display_name: export_tools
 
 primo_source:
   id: 104

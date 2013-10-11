@@ -9,9 +9,9 @@ da:
   begins_with: Starter med
   exact_match: Lige præcis
   search_optional_info: 'Ekstra information - Indtast så meget som du kender af følgende:'
-  volume: 'Volumen:'
-  date_label: 'Date:'
-  issue: 'Nummer:'
+  volume: volumen
+  date_label: dato
+  issue: nummer
   start_page: 'Start side:'
   doi_or_pubmed_id: DOI eller Pubmed identifier
   search: Søg
@@ -42,4 +42,53 @@ da:
   author: Forfatter
   publisher: Udgiver
   published: Udgivet
-  page: 'side:'
+  page: side
+  title: Titel
+  part: Part
+  article: artikel
+  journal: tidsskrift
+  published_in: Udgivet i
+  last_name: Efternavn
+  first_name: Fornavn
+  initials: Initialer
+  online_access: Online Adgang
+  not_available: Ikke tilgængelig
+  request_from_interlibrary: Lån fra biblioteket
+  more_like_this: Lignende værker
+  related_items: Relaterede poster
+  see_also: Se også
+  export_tools: Export værktøjer
+  excerpt_prompt: En begrænset visning som muligvis indeholder indeholdsfortegnelse, indeks, og andre sider.
+  copies_in_library: Eksemplarer på biblioteket
+  electronic_version: Elektronisk udgave
+  send_to_phone: Send til mobil
+  email: Email
+  more_info: Mere info
+  request: Anmode
+  edition_info: Udgave information
+  maybe_alt_edition: May be alternate edition
+  ulrichs_link_name: Oplysning om tidsskriftet
+  worldcat_link_name: Find på andre biblioteker
+  from: fra
+  first: tidligste
+  latest: seneste
+  Abstract: Abstrakt
+  some_volumes_of: Nogle volumer af
+  search_inside_some_vols: Søg i nogle volumer
+  search_inside_this: Søg i denne
+  via: ved
+  search_inside_progress_message: Søger efter værktøjer for at søge i
+  loading: loading
+  close: luk
+  email_export_header: Email titlen og lokationer
+  enter_your_email: 'Indtast din emailaddresse:'
+  send: 'Send!'
+  back: tilbage
+  short_link: Kort link
+  no_item_found_warning: 'Bemærk: %{app_name} har ikke nogen %{format_searched} med dette navn. Venligst kontrollere din søgning.'
+  text_sent: Sendt til %{number}.
+  sent: sendt
+  help_header: 'Hvis du har spørgsmåle eller problemer, kontakt:'
+  powered_by: Leveret af
+  using_services_from: Med tjenester fra
+  and_others: og andre
