@@ -12,7 +12,8 @@ module Umlaut::UrlGeneration
   # to work properly. Just set @generate_url_with_host = true
   # in your controller, and urls will be generated with hostnames
   # for the remainder of that action. 
-  def url_for(argument = {})    
+  def url_for(argument = {})
+    argument = add_locale(argument)
     if @generate_urls_with_host
       case argument
       when Hash
@@ -20,7 +21,7 @@ module Umlaut::UrlGeneration
         argument[:only_path] = false if argument[:only_path].nil?
         return super(argument)
       when String
-        # We already have a straight string, if it looks relative, 
+        # We already have a straight string, if it looks relative,
         # absolutize it. 
         if argument.starts_with?("/")
           return root_url.chomp("/") + argument
@@ -29,7 +30,7 @@ module Umlaut::UrlGeneration
         end
       when :back
         return super(argument)
-      else 
+      else
         # polymorphic, we want to force polymorphic_url instead
         # of default polymorphic_path         
         return polymorphic_url(argument)
@@ -38,6 +39,21 @@ module Umlaut::UrlGeneration
       # @generate_urls_with_host not set, just super
       super(argument)
     end    
+  end
+
+  # We don't know what datatype argument is
+  # so we need to add the locale in a special way
+  def add_locale(argument)
+    Rails.logger.debug "argument is #{argument.inspect}"
+    locale = I18n.locale.to_s
+    case argument
+      when Hash
+        argument[:locale] = locale
+      when String
+        argument.include? '?' ? argument += '&': argument += '?'
+        argument += "locale=#{locale}"
+    end
+    argument
   end
 
   # over-ride path_to_image to generate complete urls with hostname and everything
