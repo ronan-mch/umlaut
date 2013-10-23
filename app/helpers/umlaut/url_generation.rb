@@ -11,49 +11,13 @@ module Umlaut::UrlGeneration
   # This is neccesary for our partial_html_sections service
   # to work properly. Just set @generate_url_with_host = true
   # in your controller, and urls will be generated with hostnames
-  # for the remainder of that action. 
-  def url_for(argument = {})
-    argument = add_locale(argument)
-    if @generate_urls_with_host
-      case argument
-      when Hash
-        # Force only_path = false if not already set
-        argument[:only_path] = false if argument[:only_path].nil?
-        return super(argument)
-      when String
-        # We already have a straight string, if it looks relative,
-        # absolutize it. 
-        if argument.starts_with?("/")
-          return root_url.chomp("/") + argument
-        else
-          return super(argument)
-        end
-      when :back
-        return super(argument)
-      else
-        # polymorphic, we want to force polymorphic_url instead
-        # of default polymorphic_path         
-        return polymorphic_url(argument)
-      end    
-    else
-      # @generate_urls_with_host not set, just super
-      super(argument)
-    end    
-  end
-
-  # We don't know what datatype argument is
-  # so we need to add the locale in a special way
-  def add_locale(argument)
-    Rails.logger.debug "argument is #{argument.inspect}"
-    locale = I18n.locale.to_s
-    case argument
-      when Hash
-        argument[:locale] = locale
-      when String
-        argument.include? '?' ? argument += '&': argument += '?'
-        argument += "locale=#{locale}"
+  # for the remainder of that action.
+  def url_for(*arguments)
+    url = super
+    if @generate_urls_with_host && url.starts_with?("/")
+      url = root_url.chomp("/") + url
     end
-    argument
+    return url
   end
 
   # over-ride path_to_image to generate complete urls with hostname and everything
