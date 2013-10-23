@@ -46,11 +46,13 @@
   // For our UmlautHtmlUpdater object. 
   function HtmlUpdater(umlaut_base, context_object) {
     if (context_object == undefined)
-      context_object = "";      
-    
-    umlaut_base = umlaut_base.replace(/\/$/,'');
+      context_object = "";
+
+      //remove any trailing slash or param
+      umlaut_base = umlaut_base.replace(/\/$/,'').replace(/\?.+$/,'');
+
     this.umlaut_uri =  umlaut_base + '/resolve/partial_html_sections?umlaut.response_format=json&' + context_object;
-        
+
     this.section_targets = [];
            
     this.add_section_target = function(config) {
