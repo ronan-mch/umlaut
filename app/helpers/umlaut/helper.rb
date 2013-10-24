@@ -7,7 +7,10 @@ module Umlaut::Helper
   include Umlaut::FooterHelper
   include Umlaut::HtmlHeadHelper
   
-  
+  # Ensure that root_url does not include locale parameters
+  def get_root_url
+    root_url(:locale => nil)
+  end
   
   # pass in an OpenURL::ContextObject, outputs a link.
   def resolver_link(context_object, params={})
@@ -94,5 +97,39 @@ module Umlaut::Helper
     end
   end
 
-  
+  # Create dropdown if we have multiple locales, link if just two
+  def render_locale_selector
+    num_locales = I18n.config.available_locales.size
+    if num_locales > 2
+      render_locale_dropdown
+    elsif num_locales == 2
+      render_locale_link
+    end
+  end
+
+  # create a link for the non-active locale
+  def render_locale_link
+    locales = I18n.config.available_locales
+    other_locale = (locales - [I18n.locale]).pop
+    link_to t(other_locale), params.merge(:locale => other_locale), class: 'pull-right'
+  end
+
+  # Create a dropdown with the current language at the top
+  def render_locale_dropdown
+    locale_options = Array.new
+    locale_options.push([t(I18n.locale), I18n.locale])
+    I18n.config.available_locales.each do |loc|
+      locale_options.push([t(loc), loc]) unless loc == I18n.locale
+    end
+    form_tag({controller: params[:controller], action: params[:action]}, {method: "get", remote: 'true', class: 'pull-right'} ) do
+       concat(select_tag(:locale, options_for_select(locale_options), onchange: 'this.form.submit()'))
+       # send the url params as hidden fields
+       params.each do |param|
+         unless param[0] == 'controller' || param[0] == 'action' || param[0] == 'locale'
+           concat(hidden_field_tag("#{param[0]}", "#{param[1]}"))
+         end
+       end
+    end
+  end
+
 end

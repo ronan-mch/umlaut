@@ -49,7 +49,7 @@
       context_object = "";
 
       //remove any trailing slash or param
-      umlaut_base = umlaut_base.replace(/\/$/,'').replace(/\?.+$/,'');
+      umlaut_base = umlaut_base.replace(/\/$/,'');
 
     this.umlaut_uri =  umlaut_base + '/resolve/partial_html_sections?umlaut.response_format=json&' + context_object;
 
