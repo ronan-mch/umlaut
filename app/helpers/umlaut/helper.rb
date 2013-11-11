@@ -111,21 +111,22 @@ module Umlaut::Helper
   def render_locale_link
     locales = I18n.config.available_locales
     other_locale = (locales - [I18n.locale]).pop
-    link_to t(other_locale), params.merge(:locale => other_locale), class: 'pull-right'
+    link_to t(other_locale), params.merge('umlaut.locale'.to_sym => other_locale)
   end
 
   # Create a dropdown with the current language at the top
   def render_locale_dropdown
     locale_options = Array.new
-    locale_options.push([t(I18n.locale), I18n.locale])
+    #make sure the locales display with their titles
     I18n.config.available_locales.each do |loc|
-      locale_options.push([t(loc), loc]) unless loc == I18n.locale
+      locale_options.push([t(loc), loc])
     end
-    form_tag({controller: params[:controller], action: params[:action]}, {method: "get", remote: 'true', class: 'pull-right'} ) do
-       concat(select_tag(:locale, options_for_select(locale_options), onchange: 'this.form.submit()'))
+    form_tag({controller: params[:controller], action: params[:action]}, {method: "get"} ) do
+      #output select tag with language options, current language set to selected
+      concat(select_tag('umlaut.locale'.to_sym, options_for_select(locale_options, I18n.locale), onchange: 'this.form.submit()'))
        # send the url params as hidden fields
        params.each do |param|
-         unless param[0] == 'controller' || param[0] == 'action' || param[0] == 'locale'
+         unless param[0] == 'controller' || param[0] == 'action' || param[0] == 'umlaut.locale'
            concat(hidden_field_tag("#{param[0]}", "#{param[1]}"))
          end
        end
