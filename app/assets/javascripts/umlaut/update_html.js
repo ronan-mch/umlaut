@@ -44,14 +44,14 @@
 
   // Define an object constructor on the global window object
   // For our UmlautHtmlUpdater object. 
-  function HtmlUpdater(snippets_url, context_object) {
+  function HtmlUpdater(html_sections_url, context_object) {
     if (context_object == undefined)
       context_object = "";
 
       //remove any trailing slash or param
-      snippets_url = snippets_url.replace(/\/$/,'');
+      html_sections_url = html_sections_url.replace(/\/$/,'');
 
-    this.umlaut_uri =  snippets_url + context_object;
+    this.umlaut_uri =  html_sections_url + context_object;
 
     this.section_targets = [];
            
