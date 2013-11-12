@@ -86,11 +86,26 @@ da:
   enter_your_email: 'Indtast din emailaddresse:'
   send: 'Send!'
   back: tilbage
+  txt_export_header: Send titlen og lokation af posten til din mobil
+  enter_your_number: 'Indtast dit telefonnummer'
+  select_provider: 'Vælg dit netværk:'
+  choose_item_to_send: 'Vælg posten du gerne vil sende:'
+  charges_may_apply: Bemærk! gebyr bliver trukket hvis din service ikke dækker ubegrænset beskeder.
+  number_format_description: 8 cifre dansk mobilnummer
+  text_sent: Sendt til %{number}.
   short_link: Kort link
   no_item_found_warning: 'Bemærk: %{app_name} har ikke nogen %{format_searched} med dette navn. Venligst kontrollere din søgning.'
-  text_sent: Sendt til %{number}.
   sent: sendt
   help_header: 'Hvis du har spørgsmåle eller problemer, kontakt:'
   powered_by: Leveret af
   using_services_from: Med tjenester fra
   and_others: og andre
+  service_errors_title: 'På grund af fejl kan der muligvis mangler noget indhold:'
+  services_missing: 'Manglende servicer:'
+  technical_error_info: Oplysning om den tekniske fejl
+  error_header: Beklager, der er opstået en fejl
+  try_one_of_options: 'Prøv en af de følgende muligheder:'
+  try_reenter_url: Hvis du selv har indtastet URLen, tjek den for fejl.
+  if_doesnt_work: 'Hvis ikke det virker:'
+  try_backup_resolver: Prøv din forespørgsel igen mod vores backup resolver.
+  to_report_a_problem: Hvis du vil have mere hjælp eller meld en fejl, må du gerne

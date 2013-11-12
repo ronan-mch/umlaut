@@ -87,11 +87,28 @@ en:
   enter_your_email: 'Enter your email address:'
   send: Send!
   back: back
+  txt_export_header: Send the title and location of an item to your mobile phone
+  enter_your_number: 'Enter your mobile phone number:'
+  select_provider: 'Select your provider:'
+  choose_item_to_send: 'Choose the item you want to send:'
+  charges_may_apply: 'Note: charges may apply if your service plan does not cover unlimited texting'
+  number_format_description: 10 digit US cell phone number
+  text_sent: Sent to %{number}.
   short_link: Short link
   no_item_found_warning: 'Warning: %{app_name} does not know about a %{format_searched} with this name. Please check your entry'
-  text_sent: Sent to %{number}.
   sent: sent
   help_header: 'Question? Problem? Contact:'
   powered_by: Powered by
   using_services_from: Using services from
   and_others: and others
+  service_errors_title: 'Some content may not be included due to errors:'
+  services_missing: 'Services missing:'
+  technical_error_info: Technical Error Information
+  error_header: Sorry, something has gone wrong.
+  try_one_of_options: 'Please try one of the following options:'
+  try_reenter_url: If you entered this URL yourself, please check your URL for errors.
+  try_again:  'Sometimes it works to just %{link}. It may be a temporary problem which will be resolved if you come back later.'
+  if_doesnt_work: "If that doesn't work:"
+  try_backup_resolver: Try your request against backup link resolver
+  to_report_a_problem: For more help, or to report a problem, please feel free to
+  contact_us_for_help:
