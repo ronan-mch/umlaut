@@ -12,6 +12,9 @@ da:
   exact_match: Lige præcis
   search_optional_info: 'Ekstra information - Indtast så meget som du kender af følgende:'
   volume: volumen
+  vol: vol
+  iss: nr
+  p: s
   date_label: dato
   issue: nummer
   start_page: 'Start side:'

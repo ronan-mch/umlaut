@@ -17,6 +17,9 @@ en:
   date_label: date
   volume: volume
   issue: issue
+  vol: Vol
+  iss: Iss
+  p: p
   doi_or_pubmed_id: 'DOI or Pubmed Identifier:'
   search: Search
   having_trouble: Having Trouble?
