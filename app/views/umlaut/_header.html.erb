@@ -3,9 +3,11 @@
 
 <div id="header" class="header">
   <h1><%= umlaut_config.header_title   %></h1>
-  <div class='umlaut-locale-selector'>
-    <%= render_locale_selector %>
-  </div>
+  <% if umlaut_config.localisation_enabled %>
+    <div class='umlaut-locale-selector'>
+        <%= render_locale_selector %>
+    </div>
+  <% end %>
 
   <%= render_umlaut_permalink %>
 

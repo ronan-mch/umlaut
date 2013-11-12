@@ -70,6 +70,8 @@ class UmlautController < ApplicationController
       # typo?
       # entry_not_in_kb_warning true
 
+      # localisation_enabled true
+
       # rfr_ids used for umlaut generated pages.
       # rfr_ids do
       #   opensearch  "info:sid/umlaut.code4lib.org:opensearch"
