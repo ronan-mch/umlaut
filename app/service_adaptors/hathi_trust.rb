@@ -200,7 +200,7 @@ class HathiTrust < Service
       
       search_ids.each do |recordId|
         record = ht_json.values.first["records"][recordId]
-        next unlespubmeds record && record["recordURL"]
+        next unless record && record["recordURL"]
         
         request.add_service_response(
             :service=>self, 
