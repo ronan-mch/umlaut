@@ -5,7 +5,7 @@
 <% if presenter.visible? %>
   <% unless presenter.show_partial_only? %>
     <div class="<%= section_css_classes(@user_request, presenter.div_id, []).join(" ") %>">
-  <% end %>
+<% end %>
   <%= render 'section_heading', :presenter => presenter %>
   <% unless presenter.show_partial_only? %>
     <div class="umlaut_section_content">
