@@ -1,22 +1,20 @@
 <%
 all_responses = fulltext
-(title_level_fulltxt, fulltxt) = all_responses.partition do |i| 
-  i.view_data[:coverage_checked] == false || i.view_data[:can_link_to_article] == false
-end
+(title_level_fulltxt, fulltxt) = 
+  all_responses.partition {|i| i.view_data[:coverage_checked] == false || i.view_data[:can_link_to_article] == false}      
 # order em with full fulltxt before title_level_fulltxt
-all_responses = fulltxt + title_level_fulltxt
-%>
+all_responses = fulltxt + title_level_fulltxt %>
 <div class="<%= section_css_classes(@user_request, "fulltext", all_responses).join(" ") %>">
-  <%= render 'section_heading', :presenter => renderer, :force_render => true %>
-  <div class="umlaut_section_content">
-    <%= list_with_limit('umlaut_fulltext', all_responses,
-      :ul_class => "response_list", :limit => renderer.list_visible_limit ) do |item, index | %>
-      <%-
-        # Display special warning header if it's title-level only,
-        # and it's an article or issue level link. Are we
-        # at the beginning of title level display?
-      -%>
-      <% if (index == fulltxt.length && !title_level_request?) %>
+
+  <%= render :partial => 'section_heading', :locals => {:presenter => renderer, :force_render => true} %>
+  
+  <div class="umlaut_section_content"><%=
+    list_with_limit('umlaut_fulltext', all_responses, 
+      :ul_class => "response_list", :limit => renderer.list_visible_limit ) do |item, index | %><%
+      # Display special warnign header if it's title-level only,
+      # and it's an article or issue level link. Are we
+      # at the beginning of title level display?
+      if (index == fulltxt.length && !title_level_request?) %>
         </ul>
         <div class="section-subheading title-level-link-warning">
           <h4><%= (@user_request.referent.container_type_of_thing || "Container").titlecase %>-level Page Only</h4>

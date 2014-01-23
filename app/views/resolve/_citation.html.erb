@@ -36,11 +36,11 @@ cite = @user_request.referent.to_citation
   <% end %>
 
   <% if cite[:issue].present? %>
-      <span class="issue"><%="#{t(:issue).titlecase}  #{cite[:issue]}" %></span>.
+      <span class="issue">Issue <%= cite[:issue] %></span>.
   <% end %>
 
   <% if cite[:page].present? %>
-      <span class="page"><%="#{t(:page).titlecase} #{cite[:page]}" %></span>.
+      <span class="page">Page <%= cite[:page] %></span>.
   <% end %>
 </p>
 
